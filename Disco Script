@@ -1,0 +1,14 @@
+function disco() {
+  document.body.style.background = "black";
+  document.body.style.color = "white";
+  var elements = document.getElementsByTagName("*");
+  for (var i = 0; i < elements.length; i++) {
+    var hue = Math.floor(Math.random() * 360);
+    elements[i].style.color = "hsl(" + hue + ",100%,50%)";
+  }
+  setTimeout("disco()", 100);
+}
+
+disco();
+
+
